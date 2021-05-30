@@ -8,7 +8,7 @@ function projectDetails(props) {
         <div className="container section project-details">
             <div className="card z-depth-0">
                 <div className="card-content">
-                    <span className="card-title">Project Title -{id}</span>
+                    <span className="card-title">Project Title -{id}~</span>
                     <p>Incididunt veniam adipisicing nostrud quis Lorem nulla sit excepteur pariatur.</p>
                 </div>
                 <div className="card-action gret lighten-4 grey text">

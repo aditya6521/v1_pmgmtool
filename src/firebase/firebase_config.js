@@ -4,7 +4,7 @@ import "firebase/auth";
  
 
 
-var firebaseConfig = {
+var config = {
     apiKey: "AIzaSyCiicHudEYm28kYcuzZZdVq85BQSqHrE4w",
     authDomain: "v1-mgmt.firebaseapp.com",
     projectId: "v1-mgmt",
@@ -13,12 +13,12 @@ var firebaseConfig = {
     appId: "1:95708668117:web:04d4454af90ba2c43e825c"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(config);
 
-  //firebase.firestore().settings({timestampsInSnapshots:true});
+  firebase.firestore().settings({timestampsInSnapshots:true});
 
-  const dbFireStore=firebase.firestore();
+  //const dbFireStore=firebase.firestore();
 
 
-  export default dbFireStore;
+  export default firebase;
 

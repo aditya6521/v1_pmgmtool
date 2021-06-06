@@ -21,13 +21,14 @@ class CreateProject extends Component {
         e.preventDefault();
        // console.log(this.state);
        this.props.createProject(this.state);
+       document.forms["myform"].reset();
          }
 
 
     render() {
         return (
             <div className="container">
-                <form onSubmit={this.handleSubmit}  className="white">
+                <form id="myform" onSubmit={this.handleSubmit}  className="white">
                     <h5 className="gret-text text-darken-3"> Create New Project</h5>
                     <div className="input-field">
                         <label htmlFor="title">Title</label>

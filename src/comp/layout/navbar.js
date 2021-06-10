@@ -15,7 +15,7 @@ const Navbar=()=>{
                 <SignedOut/>
             </div>
         </nav>
-    )
+    ) 
 }
 
 const mapStateToProps=(state)=>{

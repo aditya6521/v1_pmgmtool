@@ -6,22 +6,24 @@ import SignedOut from "./signedOut";
 
 
 
-const Navbar=()=>{
+const Navbar=(props)=>{
+    const {auth}= props;
+    //console.log(auth);
+    const links=auth.uid ? <SignedIn/> : <SignedOut/>;
     return(
         <nav className="nav-wrapper black darken-3">
             <div className="container">
                 <Link to="/" className="brand-logo">Heloo</Link>
-                <SignedIn/>
-                <SignedOut/>
+                {auth.isLoaded && links}
             </div>
         </nav>
     ) 
 }
 
 const mapStateToProps=(state)=>{
-    console.log(state);
+    //console.log(state);
     return{
-
+        auth:state.firebase.auth
     }
 }
 

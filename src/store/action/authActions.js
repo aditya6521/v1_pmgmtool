@@ -1,5 +1,4 @@
 
-
 const SignIn=(credantials)=>{
     return(dispatch,getState,{getFirebase})=>{
         const firebase=getFirebase();
@@ -16,4 +15,17 @@ const SignIn=(credantials)=>{
 
 }
 
-export default SignIn;
+const signOut=()=>{
+    return(dispatch,getState,{getFirebase})=>{
+        const firebase=getFirebase();
+
+        firebase.auth().signOut().then(()=>{
+            dispatch({type:"SignOut_success"});
+        });
+    }
+}
+
+
+
+
+export {SignIn,signOut};

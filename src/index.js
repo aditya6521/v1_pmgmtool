@@ -20,13 +20,21 @@ const store=createStore(rootReducer,
   );
 
 
+  const myConfig = {
+    userProfile: 'users',
+    useFirestoreForProfile: true,
+    attachAuthIsReady:true
+  };
+
 
   const rrfProps = {
       firebase,
-      config: fbConfig,
+      config: myConfig, fbConfig,
       dispatch: store.dispatch,
-      createFirestoreInstance    
+      createFirestoreInstance
     };
+
+    
 
 
 ReactDOM.render(

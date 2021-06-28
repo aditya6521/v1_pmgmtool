@@ -23,6 +23,7 @@ class CreateProject extends Component {
        // console.log(this.state);
        this.props.createProject(this.state);
        document.forms["myform"].reset();
+       this.props.history.push("/");
          }
 
 

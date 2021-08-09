@@ -23,6 +23,7 @@ code {
 form{
   padding: 20px;
   margin-top:60px;
+  text-align: center;
 }
 
 form button, form h5{
@@ -35,4 +36,15 @@ input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]){
   border-color: #022179;
   box-shadow: none;
+}
+
+.ttest{
+  color:#1D4ED8;
+  margin-top: 25px;
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 1rem 1.5rem;
+  background-color: aliceblue;
+  border-radius: 2rem;
 }

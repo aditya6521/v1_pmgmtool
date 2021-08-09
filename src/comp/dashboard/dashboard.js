@@ -4,7 +4,7 @@ import { firestoreConnect } from "react-redux-firebase";
 import { Redirect } from "react-router-dom";
 import { compose } from "redux";
 import ProjectList from "../project/projectList";
-import Notifications from "./notification";
+//import Notifications from "./notification"; firebase issues 
 
 
 
@@ -16,12 +16,14 @@ class Dashboard extends Component {
         return(
             <div className="dashboard container">
                 <div className="row">
-                    <div className="col s12 m6">
+                <div className="ttest">
+                        Dashboard
+                    </div>
+                    <div className="s12 m8">
                         <ProjectList projects={projects}/>  
                     </div>
-                    <div className="col s12 m5 offset-m1">
-                            <Notifications/>
-                    </div>
+                
+                    
                 </div>
             </div>
         )
@@ -29,7 +31,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps=(state)=>{
-    console.log(state);
+    //console.log(state);
     return{
         projects:state.firestore.ordered.projects,
         auth:state.firebase.auth
